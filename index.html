@@ -4,15 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        @font-face {
+            font-family: 'Return of Ganon';
+            src: local('Return of Ganon'),
+                 url("Return of Ganon.ttf") format('truetype');
+        }
+
+        :root {
+            --first-color: black;
+            --second-color: #9E9E9E;
+        }
+
+        html {
+            display: table;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        main {
+            display: inline-block;
+            padding: 1em;
+            font: 2em 'Return of Ganon', monospace;
+            text-align: left;
+            border: 4px solid black;
+            border-color: var(--first-color);
+        }
+
+        h1, ul, a:link {
+            color: black;
+            color: var(--first-color);
+        }
+
+        a:visited {
+            color: #9E9E9E;
+            color: var(--second-color);
+        }
+
+        ul {
+            list-style-type: square;
+        }
+    </style>
+    <script>
+        const colors = [['black', '#9E9E9E'], ['blue', '#7986CB'], ['darkorange', '#FFC107']]
+        const idx = Number(localStorage.getItem('color'))
+        document.documentElement.style.setProperty('--first-color', colors[idx][0])
+        document.documentElement.style.setProperty('--second-color', colors[idx][1])
+        localStorage.setItem('color', (idx + 1) % colors.length)
+    </script>
     <title>Catsocks</title>
 </head>
 <body>
-    <h1>Catsocks</h1>
-    <ul>
-        <li><a href="https://github.com/catsocks">Github</a></li>
-        <li><a href="https://gist.github.com/catsocks">Github Gist</a></li>
-        <li><a href="https://repl.it/@catsocks">Repl.it</a></li>
-        <li><a href="https://twitter.com/catsocks">Twitter</a></li>
-    </ul>
+    <main>
+        <h1>Catsocks</h1>
+        <ul>
+            <li><a href="https://github.com/catsocks">Github</a></li>
+            <li><a href="https://gist.github.com/catsocks">Github Gist</a></li>
+            <li><a href="https://repl.it/@catsocks">Repl.it</a></li>
+            <li><a href="https://twitter.com/catsocks">Twitter</a></li>
+        </ul>
+    </main>
 </body>
 </html>
