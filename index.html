@@ -64,6 +64,25 @@
             font-size: 15px;
         }
     }
+
+    @media (prefers-color-scheme: dark) {
+        body {
+            background: #111213;
+            color: white;
+        }
+
+        img {
+            filter: invert(1);
+        }
+
+        a {
+            color: cornflowerblue;
+        }
+
+        a:visited {
+            color: hsl(240, 63.5%, 58%);
+        }
+    }
     </style>
     <title>catsocks</title>
 </head>
