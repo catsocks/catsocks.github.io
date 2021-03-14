@@ -1,5 +1,3 @@
 # catsocks.github.io
 
-## Credits
-
-* [Return of Ganon](http://www.zone38.net/font/) font by Codeman38
+My personal website with some links.

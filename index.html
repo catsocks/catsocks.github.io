@@ -7,75 +7,78 @@
     <meta property="og:title" content="catsocks">
     <meta property="og:site_name" content="catsocks">
     <meta property="og:url" content="https://catsocks.github.io">
-    <meta property="og:description" content="My personal landing page with some links">
+    <meta property="og:description" content="My personal website with some links.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://catsocks.github.io/open-graph.png">
     <style>
-        @font-face {
-            font-family: 'Return of Ganon';
-            src: local('Return of Ganon'),
-                 url("return-of-ganon.ttf") format('truetype');
-        }
+    body {
+        font: 24px monospace;
+    }
 
-        :root {
-            --first-color: black;
-            --second-color: #9E9E9E;
-        }
+    #container {
+        display: flex;
+        align-items: center;
+    }
 
-        html {
-            display: table;
-            width: 100%;
-            height: 100%;
+    .absolute-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    img {
+        width: 241px;
+        margin-right: 2em;
+    }
+
+    ul {
+        list-style-type: square;
+        white-space: nowrap;
+    }
+
+    a {
+        color: royalblue;
+    }
+
+    a:visited {
+        color: midnightblue;
+    }
+
+    @media all and (max-width: 769px) {
+        img {
+            width: 160px;
         }
 
         body {
-            display: table-cell;
-            vertical-align: middle;
-            text-align: center;
+            font-size: 19px;
+        }
+    }
+
+    @media all and (max-width: 480px) {
+        img {
+            width: 125px;
         }
 
-        main {
-            display: inline-block;
-            padding: 1em;
-            font: 2em 'Return of Ganon', monospace;
-            text-align: left;
-            border: 4px solid black;
-            border-color: var(--first-color);
-            box-shadow: 0 6px var(--first-color);
+        body {
+            font-size: 15px;
         }
-
-        h1, ul, a:link {
-            color: black;
-            color: var(--first-color);
-        }
-
-        a:visited {
-            color: #9E9E9E;
-            color: var(--second-color);
-        }
-
-        ul {
-            list-style-type: square;
-        }
+    }
     </style>
-    <script>
-        const colors = [['black', '#9E9E9E'], ['blue', '#7986CB'], ['darkorange', '#FFC107']]
-        const idx = Number(localStorage.getItem('color'))
-        document.documentElement.style.setProperty('--first-color', colors[idx][0])
-        document.documentElement.style.setProperty('--second-color', colors[idx][1])
-        localStorage.setItem('color', (idx + 1) % colors.length)
-    </script>
     <title>catsocks</title>
 </head>
 <body>
-    <main>
-        <h1>catsocks</h1>
-        <ul>
-            <li><a href="https://github.com/catsocks">Github</a></li>
-            <li><a href="https://gist.github.com/catsocks">Github Gist</a></li>
-            <li><a href="https://repl.it/@catsocks">Repl.it</a></li>
-            <li><a href="https://twitter.com/catsocks">Twitter</a></li>
-        </ul>
-    </main>
+    <div id="container" class="absolute-center">
+        <img src="avatar.png">
+        <main>
+            <h1>catsocks</h1>
+            <ul>
+                <li><a href="https://github.com/catsocks">Github</a> (<a href="https://gist.github.com/catsocks">gists</a>)</li>
+                <li><a href="https://codepen.io/catsocks">CodePen</a></li>
+                <li><a href="https://repl.it/@catsocks">Repl.it</a></li>
+                <li><a href="https://twitter.com/catsocks">Twitter</a></li>
+            </ul>
+        </main>
+    </div>
 </body>
 </html>
