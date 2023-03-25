@@ -1,3 +1,5 @@
 # catsocks.github.io
 
-My personal website with some links.
+My old personal website with only a few links.
+
+Check out the [repository](https://github.com/catsocks/website) for my new website.
